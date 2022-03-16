@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.himark.mapper.MemberMapper">
+
+<resultMap type="com.himark.domain.MemberVO" id="getMemberMap">
+	  <result property="userId" column="user_id"/>
+        <result property="userPwd" column="user_password"/>
+        <result property="userName" column="user_name"/>
+        <result property="pos" column="pos_name"/>    
+        <result property="duty" column="duty_name"/>     
+        <result property="dept" column="dept_name"/>  
+        <result property="authorityCode" column="authority_code"/>  
+        <result property="birth" column="birth_date"/>  
+        <result property="sex" column="code_name"/>  
+        <result property="phoneNo" column="phone_number"/>  
+        <result property="email" column="email"/>  
+         <result property="currentState" column="current_state"/>  
+</resultMap>
+
+
+<select id="getMember" resultMap="getMemberMap">
+SELECT user.user_name , user.user_id, user.birth_date, user.phone_number, user.email, user.user_password, c.code_name, dept.dept_name, duty.duty_name ,pos.pos_name 
+FROM user  
+JOIN dept 
+ON user.dept_id = dept.dept_id
+join pos
+on user.pos_id = pos.pos_id
+join duty
+on user.duty_id = duty.duty_id 
+join code_info c
+on user.sex = c.common_code
+where user.user_name=#{userName}
+</select>
+
+</mapper>
