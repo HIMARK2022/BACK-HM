@@ -40,7 +40,6 @@ $(document).ready(function() {
   var table =$('#dataTable1').DataTable({
     "pageLength":10,
     language:lang_kor, 
-    
     pageLength: 10,     //페이지 당 글 개수 설정
     destroy: true,
     processing: true,
@@ -48,6 +47,19 @@ $(document).ready(function() {
     searching: true,    //검색란 표시 설정
     paging: true,  
     
+  });
+});
+$(document).ready(function() {
+  var table =$('#dataTable10').DataTable({
+    "pageLength":10,
+    language:lang_kor, 
+    destroy: false,
+    processing: false,
+    serverSide: false,
+   	paging: false, 
+	lengthChange: false,
+    searching: false,    //검색란 표시 설정
+    ordering: false
   });
 });
 $(document).ready(function() {
