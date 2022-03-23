@@ -3,8 +3,13 @@
 .table-responsive{
     overflow-x: hidden;
 }
+ 
 #No, #classification, #requestdate, #enddate, #state, #refuse{
     width: 10% !important;
+
+}
+#dataTable11 th{
+	text-align:center;
 }
 #title{
     width: 60% !important;
@@ -17,9 +22,11 @@ th, td{
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    text-align:center;
 }
 
 th{
+	text-align:center;
 	 background: #f8f9fc;
 }
 #strong{
@@ -210,3 +217,5 @@ ul {
             transform: scaleY(0);
         }
     }
+   
+ 
