@@ -103,19 +103,18 @@
 			<nav
 				class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-				<!-- 2022년 3월 2일 수요일 -->
-				<b id="date"></b>
+				2022년 3월 2일 수요일
 
 				<!-- Topbar Navbar -->
 				<ul class="navbar-nav ml-auto">
 					<!-- Nav Item - Alerts -->
-					<!-- <li class="nav-item dropdown no-arrow mx-1"><a
+					<li class="nav-item dropdown no-arrow mx-1"><a
 						class="nav-link dropdown-toggle" href="#" id="alertsDropdown"
 						role="button" data-toggle="dropdown" aria-haspopup="true"
-						aria-expanded="false"> <i class="fas fa-bell fa-fw"></i> Counter - Alerts
+						aria-expanded="false"> <i class="fas fa-bell fa-fw"></i> <!-- Counter - Alerts -->
 							<span class="badge badge-danger badge-counter">3+</span>
-					</a> --> <!-- Dropdown - Alerts -->
-						<!-- <div
+					</a> <!-- Dropdown - Alerts -->
+						<div
 							class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
 							aria-labelledby="alertsDropdown">
 							<h6 class="dropdown-header">Alerts Center</h6>
@@ -153,7 +152,7 @@
 								</div>
 							</a> <a class="dropdown-item text-center small text-gray-500"
 								href="#">Show All Alerts</a>
-						</div> --></li>
+						</div></li>
 
 
 					<div class="topbar-divider d-none d-sm-block"></div>
@@ -163,8 +162,9 @@
 						class="nav-link dropdown-toggle" href="#" id="userDropdown"
 						role="button" data-toggle="dropdown" aria-haspopup="true"
 						aria-expanded="false"> <span
-							class="mr-2 d-none d-lg-inline text-gray-600 small">일반사용자</span> <!-- <img class="img-profile rounded-circle"
-							src="/resources/img/undraw_profile.svg"> -->
+							class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas
+								McGee</span> <img class="img-profile rounded-circle"
+							src="/resources/img/undraw_profile.svg">
 					</a> <!-- Dropdown - User Information -->
 						<div
 							class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -182,15 +182,4 @@
 			</nav>
 			<!-- End of Topbar 헤더 끝 -->
 </body>
-<script>
-	var today = new Date();
-	var year = today.getFullYear();
-	var month = ('0' + (today.getMonth() + 1)).slice(-2);
-	var day = ('0' + today.getDate()).slice(-2);
-	var week = new Array('일','월','화','수','목','금','토');
-	
-	var dateString ="<b>"+ year + '년 ' + month  + '월 ' + day +'일 '+week[today.getDay()]+"요일" + "</b>";
-
-	$("#date").append(dateString);
-</script>
 </html>
